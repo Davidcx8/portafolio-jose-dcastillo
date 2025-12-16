@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #0F172A;
+    --primary-dark: #020617;
+    --primary-light: #1E293B;
+    --accent: #00B4D8;
+    --accent-light: #06B6D4;
+    --accent-dark: #0099BA;
+    --neutral-light: #F8FAFC;
+    --neutral: #6B7280;
+    --neutral-dark: #374151;
+    --emphasis: #FBBF24;
+  }
+
+  .dark {
+    --primary: #F8FAFC;
+    --primary-dark: #FFFFFF;
+    --primary-light: #E2E8F0;
+    --accent: #00B4D8;
+    --accent-light: #06B6D4;
+    --accent-dark: #0099BA;
+    --neutral-light: #0F172A;
+    --neutral: #9CA3AF;
+    --neutral-dark: #D1D5DB;
+    --emphasis: #FBBF24;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-light dark:bg-primary text-primary dark:text-primary-light transition-colors duration-300;
+  }
+}
+
+@layer components {
+
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/10 dark:bg-gray-900/10 backdrop-blur-md border border-white/20 dark:border-gray-700/20;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
+  }
+
+  /* Button animations */
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-20 px-6 md:px-12 lg:px-24;
+  }
+
+  /* Container max-width */
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Reveal animation */
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+
+  .reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
