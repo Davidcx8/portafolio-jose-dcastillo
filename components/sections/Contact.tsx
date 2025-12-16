@@ -91,7 +91,7 @@ export default function Contact() {
 
                                 <div className="mt-6 pt-6 border-t border-neutral/20">
                                     <a
-                                        href="/cv/jose-david-castillo-cv.pdf"
+                                        href="/cv/Jose-David-CV.pdf"
                                         download
                                         className="w-full font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 inline-flex items-center justify-center bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-white py-3 px-6 text-base"
                                     >

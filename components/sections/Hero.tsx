@@ -40,7 +40,7 @@ export default function Hero() {
                     <div className="flex flex-wrap justify-center gap-6 mb-12 text-neutral-light text-sm md:text-base animate-slide-up" style={{ animationDelay: '0.4s' }}>
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 bg-accent rounded-full" />
-                            <span>4 proyectos clave</span>
+                            <span>5 proyectos clave</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 bg-accent rounded-full" />
@@ -58,7 +58,7 @@ export default function Hero() {
                             Ver Proyectos
                         </Button>
                         <a
-                            href="/cv/jose-david-castillo-cv.pdf"
+                            href="/cv/Jose-David-CV.pdf"
                             download
                             className="font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 inline-flex items-center justify-center bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-white py-4 px-8 text-lg"
                         >
