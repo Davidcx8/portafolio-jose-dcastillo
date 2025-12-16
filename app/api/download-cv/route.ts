@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
             status: 200,
             headers: {
                 'Content-Type': 'application/pdf',
-                'Content-Disposition': 'attachment; filename="Jose-David-Castillo-CV.pdf"',
+                'Content-Disposition': 'attachment; filename="JoseDavidCV.pdf"',
                 'Content-Length': pdfBuffer.length.toString(),
                 'Cache-Control': 'public, max-age=31536000, immutable',
             },
