@@ -58,8 +58,7 @@ export default function Hero() {
                             Ver Proyectos
                         </Button>
                         <a
-                            href="/cv/cv-jose-david-castillo.pdf"
-                            download
+                            href="/api/download-cv"
                             className="font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 inline-flex items-center justify-center bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-white py-4 px-8 text-lg"
                         >
                             <Download className="mr-2" size={20} />
