@@ -5,10 +5,11 @@ import { Mail, Linkedin, Github, Download, Send } from 'lucide-react'
 import Button from '../ui/Button'
 import Card from '../ui/Card'
 import { useForm, ValidationError } from '@formspree/react'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function Contact() {
-    const [state, handleSubmit, reset] = useForm("xyzrqbrk") // Formspree form ID
+    const [state, handleSubmit] = useForm("xyzrqbrk") // Formspree form ID
+    const formRef = useRef<HTMLFormElement>(null)
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.2,
@@ -16,13 +17,13 @@ export default function Contact() {
 
     // Reset form after successful submission
     useEffect(() => {
-        if (state.succeeded) {
+        if (state.succeeded && formRef.current) {
             const timer = setTimeout(() => {
-                reset()
+                formRef.current?.reset()
             }, 3000) // Reset after 3 seconds to allow user to see success message
             return () => clearTimeout(timer)
         }
-    }, [state.succeeded, reset])
+    }, [state.succeeded])
 
     return (
         <section id="contact" className="section bg-neutral-light dark:bg-gray-900">
@@ -130,7 +131,7 @@ export default function Contact() {
                                 Envíame un Mensaje
                             </h3>
 
-                            <form onSubmit={handleSubmit} className="space-y-4">
+                            <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium mb-2 text-neutral-dark dark:text-neutral-light">
                                         Nombre
