@@ -36,13 +36,13 @@ export default function Contact() {
                         ¿Quieres ver cómo puedo ayudar a tu equipo?
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-4 md:gap-8 w-full">
+                    <div className="grid md:grid-cols-2 gap-4 md:gap-8 w-full min-w-0">
                         {/* Contact Info */}
                         <div
-                            className={`space-y-6 transition-all duration-700 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                            className={`space-y-6 transition-all duration-700 overflow-hidden min-w-0 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
                                 }`}
                         >
-                            <Card glass>
+                            <Card glass className="overflow-hidden">
                                 <h3 className="font-display font-bold text-2xl mb-6 text-primary dark:text-white">
                                     Información de Contacto
                                 </h3>
@@ -57,7 +57,7 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-primary dark:text-white">Email</p>
-                                            <p className="text-sm text-neutral dark:text-neutral-light">
+                                            <p className="text-sm text-neutral dark:text-neutral-light break-all">
                                                 josedavidcastillocastillo75@gmail.com
                                             </p>
                                         </div>
@@ -121,7 +121,7 @@ export default function Contact() {
                         {/* Contact Form */}
                         <Card
                             glass
-                            className={`transition-all duration-700 delay-100 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+                            className={`transition-all duration-700 delay-100 overflow-hidden min-w-0 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
                                 }`}
                         >
                             <h3 className="font-display font-bold text-2xl mb-6 text-primary dark:text-white">

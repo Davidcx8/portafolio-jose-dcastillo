@@ -8,7 +8,7 @@ interface CardProps {
 }
 
 export default function Card({ children, className = '', hover = false, glass = false }: CardProps) {
-    const baseStyles = 'rounded-xl p-6 transition-all duration-300'
+    const baseStyles = 'rounded-xl p-4 sm:p-6 transition-all duration-300'
     const hoverStyles = hover ? 'hover:scale-105 hover:shadow-2xl cursor-pointer' : ''
     const glassStyles = glass ? 'glass' : 'bg-white dark:bg-gray-800 shadow-lg'
 
