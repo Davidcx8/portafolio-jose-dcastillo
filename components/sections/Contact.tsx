@@ -24,7 +24,7 @@ export default function Contact() {
 
     return (
         <section id="contact" className="section bg-neutral-light dark:bg-gray-900">
-            <div className="container-custom">
+            <div className="max-w-5xl mx-auto">
                 <div ref={ref}>
                     <h2
                         className={`font-display font-bold text-4xl md:text-5xl text-center mb-4 text-primary dark:text-white transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -36,7 +36,7 @@ export default function Contact() {
                         ¿Quieres ver cómo puedo ayudar a tu equipo?
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {/* Contact Info */}
                         <div
                             className={`space-y-6 transition-all duration-700 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
