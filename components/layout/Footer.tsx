@@ -76,7 +76,6 @@ export default function Footer() {
                 {/* Bottom */}
                 <div className="border-t border-white/10 pt-8 text-center text-sm text-neutral-light">
                     <p>© {currentYear} José David Castillo. Todos los derechos reservados.</p>
-                    <p className="mt-2 text-xs">Estudiante ITLA · Disponible para pasantías</p>
                 </div>
             </div>
         </footer>

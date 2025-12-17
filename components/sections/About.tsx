@@ -37,7 +37,7 @@ export default function About() {
                             {/* Bio text */}
                             <div className="space-y-4 text-center md:text-left">
                                 <p className="text-lg text-neutral-dark dark:text-neutral-light leading-relaxed">
-                                    <strong className="text-primary dark:text-white">Estudiante en ITLA</strong> y profesional en tecnología especializado en <span className="text-accent font-semibold">transformar datos y tareas repetitivas</span> en procesos automatizados y dashboards accionables.
+                                    <strong className="text-primary dark:text-white">Profesional en tecnología</strong> especializado en <span className="text-accent font-semibold">transformar datos y tareas repetitivas</span> en procesos automatizados y dashboards accionables.
                                 </p>
                                 <p className="text-lg text-neutral-dark dark:text-neutral-light leading-relaxed">
                                     Diseño <strong>pipelines ETL</strong>, automatizaciones con <strong>n8n</strong> y soluciones web escalables con <strong>Next.js, Docker y Python</strong> para generar impacto real en operaciones.

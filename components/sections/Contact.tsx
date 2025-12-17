@@ -110,9 +110,9 @@ export default function Contact() {
 
                                 <div className="mt-4 p-4 bg-accent/10 dark:bg-accent/20 rounded-lg">
                                     <p className="text-sm text-center text-neutral-dark dark:text-neutral-light">
-                                        <strong className="text-accent">Disponible para Trabajo y Pasantías</strong>
+                                        <strong className="text-accent">Disponible para Nuevas Oportunidades</strong>
                                         <br />
-                                        Carta de ITLA disponible
+                                        Abierto a proyectos y colaboraciones
                                     </p>
                                 </div>
                             </Card>
