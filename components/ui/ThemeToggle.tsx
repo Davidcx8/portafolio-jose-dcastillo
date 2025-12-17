@@ -29,7 +29,7 @@ export default function ThemeToggle() {
     return (
         <button
             onClick={toggleTheme}
-            className="relative p-2 sm:p-3 rounded-full bg-accent/10 hover:bg-accent/20 dark:bg-accent/20 dark:hover:bg-accent/30 transition-all duration-300 group overflow-hidden flex-shrink-0"
+            className="relative p-3 rounded-full bg-accent/10 hover:bg-accent/20 dark:bg-accent/20 dark:hover:bg-accent/30 transition-all duration-300 group overflow-hidden"
             aria-label="Toggle theme"
         >
             <div className="relative w-6 h-6">

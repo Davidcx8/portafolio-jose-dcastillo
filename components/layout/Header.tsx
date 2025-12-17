@@ -69,14 +69,14 @@ export default function Header() {
                 : 'bg-transparent'
                 }`}
         >
-            <nav className="container-custom px-2 sm:px-6 py-4">
+            <nav className="w-full max-w-7xl mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
-                        <div className="relative w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
+                    <Link href="/" className="flex items-center gap-3 group">
+                        <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
                             <Image src="/logo.svg" alt="JD Logo" fill className="object-contain" />
                         </div>
-                        <span className="font-display font-bold text-lg sm:text-xl text-primary dark:text-primary-light hidden xs:inline">
+                        <span className="font-display font-bold text-xl text-primary dark:text-primary-light">
                             José David
                         </span>
                     </Link>
@@ -97,14 +97,14 @@ export default function Header() {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center gap-1 sm:gap-2">
+                    <div className="md:hidden flex items-center gap-2">
                         <ThemeToggle />
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="p-2 text-primary dark:text-primary-light hover:text-accent transition-colors flex-shrink-0"
+                            className="p-2 text-primary dark:text-primary-light hover:text-accent transition-colors"
                             aria-label="Toggle menu"
                         >
-                            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
                     </div>
                 </div>
