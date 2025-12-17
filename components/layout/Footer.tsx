@@ -21,6 +21,13 @@ export default function Footer() {
         } else {
             // On another page, navigate to home with hash
             router.push(`/${href}`)
+            // Use setTimeout to scroll after navigation
+            setTimeout(() => {
+                const element = document.querySelector(href)
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                }
+            }, 100)
         }
     }
 
