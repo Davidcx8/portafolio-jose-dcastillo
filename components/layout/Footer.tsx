@@ -65,7 +65,7 @@ export default function Footer() {
                                 Privacidad
                             </Link>
                             <a
-                                href="https://github.com/davidcx8/portfolio-jdcastillo"
+                                href="https://github.com/davidcx8"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-neutral-light hover:text-accent transition-colors"
