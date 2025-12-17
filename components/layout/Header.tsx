@@ -10,6 +10,7 @@ import ThemeToggle from '../ui/ThemeToggle'
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [isMobile, setIsMobile] = useState(false)
     const pathname = usePathname()
     const router = useRouter()
 
@@ -17,8 +18,19 @@ export default function Header() {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20)
         }
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768) // md breakpoint
+        }
+
+        // Initial check
+        handleResize()
+
         window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('resize', handleResize)
+        }
     }, [])
 
     const navLinks = [
@@ -45,8 +57,9 @@ export default function Header() {
         }
     }
 
-    // Always show background for consistent styling
-    const shouldHaveBackground = true
+    // Mobile: always show background for menu visibility
+    // Desktop: show background only when scrolled (original effect)
+    const shouldHaveBackground = isMobile || isScrolled
 
     return (
         <header
