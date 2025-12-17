@@ -4,11 +4,14 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
+import { usePathname, useRouter } from 'next/navigation'
 import ThemeToggle from '../ui/ThemeToggle'
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const pathname = usePathname()
+    const router = useRouter()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,18 +29,28 @@ export default function Header() {
         { href: '#contact', label: 'Contacto' },
     ]
 
-    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault()
-        const element = document.querySelector(href)
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' })
-            setIsMobileMenuOpen(false)
+        setIsMobileMenuOpen(false)
+
+        if (pathname === '/') {
+            // Already on home page, just scroll
+            const element = document.querySelector(href)
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' })
+            }
+        } else {
+            // On another page, navigate to home with hash
+            router.push(`/${href}`)
         }
     }
 
+    // Force background on internal pages (not home)
+    const shouldHaveBackground = isScrolled || pathname !== '/'
+
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled
+            className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${shouldHaveBackground
                 ? 'bg-white/90 dark:bg-primary/90 backdrop-blur-md shadow-lg'
                 : 'bg-transparent'
                 }`}
@@ -60,7 +73,7 @@ export default function Header() {
                             <a
                                 key={link.href}
                                 href={link.href}
-                                onClick={e => scrollToSection(e, link.href)}
+                                onClick={e => handleNavigation(e, link.href)}
                                 className="text-neutral-dark dark:text-neutral-light hover:text-accent dark:hover:text-accent transition-colors duration-200 font-medium"
                             >
                                 {link.label}
@@ -90,7 +103,7 @@ export default function Header() {
                                 <a
                                     key={link.href}
                                     href={link.href}
-                                    onClick={e => scrollToSection(e, link.href)}
+                                    onClick={e => handleNavigation(e, link.href)}
                                     className="text-neutral-dark dark:text-neutral-light hover:text-accent dark:hover:text-accent transition-colors duration-200 font-medium py-2"
                                 >
                                     {link.label}

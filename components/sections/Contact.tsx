@@ -18,10 +18,7 @@ export default function Contact() {
     // Reset form after successful submission
     useEffect(() => {
         if (state.succeeded && formRef.current) {
-            const timer = setTimeout(() => {
-                formRef.current?.reset()
-            }, 3000) // Reset after 3 seconds to allow user to see success message
-            return () => clearTimeout(timer)
+            formRef.current.reset()
         }
     }, [state.succeeded])
 
