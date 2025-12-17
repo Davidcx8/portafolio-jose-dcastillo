@@ -36,7 +36,7 @@ export default function Contact() {
                         ¿Quieres ver cómo puedo ayudar a tu equipo?
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 gap-4 md:gap-8 w-full">
                         {/* Contact Info */}
                         <div
                             className={`space-y-6 transition-all duration-700 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
