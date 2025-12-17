@@ -69,8 +69,8 @@ export default function Header() {
                 : 'bg-transparent'
                 }`}
         >
-            <nav className="container-custom px-6 py-4">
-                <div className="flex items-center justify-between">
+            <nav className="container-custom">
+                <div className="flex items-center justify-between px-4 sm:px-6 py-4">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
                         <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
