@@ -57,9 +57,10 @@ export default function Header() {
         }
     }
 
-    // Mobile: always show background for menu visibility
-    // Desktop: show background only when scrolled (original effect)
-    const shouldHaveBackground = isMobile || isScrolled
+    // Show background when:
+    // - Scrolled (any screen size)
+    // - Mobile menu is open (better visibility)
+    const shouldHaveBackground = isScrolled || isMobileMenuOpen
 
     return (
         <header
