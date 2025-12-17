@@ -1,8 +1,28 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { Github, Linkedin, Mail } from 'lucide-react'
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
+    const pathname = usePathname()
+    const router = useRouter()
+
+    const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault()
+
+        if (pathname === '/') {
+            // Already on home page, just scroll
+            const element = document.querySelector(href)
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' })
+            }
+        } else {
+            // On another page, navigate to home with hash
+            router.push(`/${href}`)
+        }
+    }
 
     return (
         <footer className="bg-primary dark:bg-gray-900 text-white py-12">
@@ -20,10 +40,18 @@ export default function Footer() {
                     <div>
                         <h4 className="font-semibold mb-4">Enlaces</h4>
                         <div className="flex flex-col gap-2 text-sm">
-                            <a href="#projects" className="text-neutral-light hover:text-accent transition-colors">
+                            <a
+                                href="#projects"
+                                onClick={(e) => handleNavigation(e, '#projects')}
+                                className="text-neutral-light hover:text-accent transition-colors cursor-pointer"
+                            >
                                 Proyectos
                             </a>
-                            <a href="#skills" className="text-neutral-light hover:text-accent transition-colors">
+                            <a
+                                href="#skills"
+                                onClick={(e) => handleNavigation(e, '#skills')}
+                                className="text-neutral-light hover:text-accent transition-colors cursor-pointer"
+                            >
                                 Skills
                             </a>
                             <Link href="/privacy" className="text-neutral-light hover:text-accent transition-colors">
