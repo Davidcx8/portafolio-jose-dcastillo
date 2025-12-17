@@ -84,16 +84,16 @@ export default function Projects() {
 
                                         {/* Links */}
                                         {project.links && (
-                                            <div className="flex gap-4 pt-2">
+                                            <div className="flex gap-3 pt-4">
                                                 {project.links.github && (
                                                     <a
                                                         href={project.links.github}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 text-accent hover:text-accent-dark transition-colors"
+                                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-700 dark:to-gray-800 text-white rounded-lg hover:from-gray-900 hover:to-black dark:hover:from-gray-600 dark:hover:to-gray-700 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 font-semibold"
                                                     >
                                                         <Github size={20} />
-                                                        <span className="text-sm font-medium">Código</span>
+                                                        <span className="text-sm">Ver Código</span>
                                                     </a>
                                                 )}
                                                 {project.links.demo && (
@@ -101,10 +101,10 @@ export default function Projects() {
                                                         href={project.links.demo}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 text-accent hover:text-accent-dark transition-colors"
+                                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-accent to-accent-dark text-white rounded-lg hover:from-accent-dark hover:to-accent transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 font-semibold"
                                                     >
                                                         <ExternalLink size={20} />
-                                                        <span className="text-sm font-medium">Demo</span>
+                                                        <span className="text-sm">Ver Demo Live</span>
                                                     </a>
                                                 )}
                                             </div>

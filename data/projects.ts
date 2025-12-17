@@ -25,6 +25,10 @@ export const projects: Project[] = [
         techStack: ['Power BI', 'SQL', 'DAX', 'Python', 'Pandas'],
         image: '/images/projects/dashboard-powerbi.png',
         category: 'datos',
+        links: {
+            github: 'https://github.com/davidcx8',
+            demo: 'https://github.com/davidcx8',
+        },
     },
     {
         id: 'automatizacion-n8n',
@@ -36,6 +40,10 @@ export const projects: Project[] = [
         techStack: ['n8n', 'JavaScript', 'Webhooks', 'APIs REST', 'SQL'],
         image: '/images/projects/n8n-workflow.png',
         category: 'automatizacion',
+        links: {
+            github: 'https://github.com/davidcx8',
+            demo: 'https://github.com/davidcx8',
+        },
     },
     {
         id: 'ecommerce-platform',
@@ -47,6 +55,10 @@ export const projects: Project[] = [
         techStack: ['Next.js', 'React', 'Stripe', 'Tailwind CSS', 'PostgreSQL', 'Vercel'],
         image: '/images/projects/ecommerce-platform.png',
         category: 'ecommerce',
+        links: {
+            github: 'https://github.com/davidcx8',
+            demo: 'https://github.com/davidcx8',
+        },
     },
     {
         id: 'webapp-fullstack-docker',
@@ -58,6 +70,10 @@ export const projects: Project[] = [
         techStack: ['Next.js', 'React', 'Docker', 'Python', 'AWS', 'CI/CD'],
         image: '/images/projects/webapp-fullstack.png',
         category: 'web',
+        links: {
+            github: 'https://github.com/davidcx8',
+            demo: 'https://github.com/davidcx8',
+        },
     },
     {
         id: 'pipeline-etl-python',
@@ -69,6 +85,10 @@ export const projects: Project[] = [
         techStack: ['Python', 'Pandas', 'SQL', 'AWS', 'GCP', 'Docker'],
         image: '/images/projects/etl-pipeline.png',
         category: 'etl',
+        links: {
+            github: 'https://github.com/davidcx8',
+            demo: 'https://github.com/davidcx8',
+        },
     },
 ]
 
