@@ -45,8 +45,8 @@ export default function Header() {
         }
     }
 
-    // Force background on internal pages (not home)
-    const shouldHaveBackground = isScrolled || pathname !== '/'
+    // Always show background for consistent styling
+    const shouldHaveBackground = true
 
     return (
         <header
