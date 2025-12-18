@@ -31,19 +31,23 @@ export default function Projects() {
                             <Card
                                 key={project.id}
                                 hover
-                                className={`transition-all duration-700 delay-${index * 100} ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                                className={`overflow-hidden border-2 border-primary/10 dark:border-white/10 hover:border-accent/30 dark:hover:border-accent/30 bg-gradient-to-br from-white via-white to-neutral-light/20 dark:from-gray-800 dark:via-gray-850 dark:to-gray-900 transition-all duration-700 delay-${index * 100} ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                                     }`}
                             >
                                 <div className="grid md:grid-cols-2 gap-6 items-center">
                                     {/* Project Image */}
-                                    <div className={`relative h-64 md:h-80 rounded-lg overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                                    <div className={`relative h-64 md:h-80 rounded-xl overflow-hidden group ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                                         <Image
                                             src={project.image}
                                             alt={project.title}
                                             fill
-                                            className="object-cover hover:scale-105 transition-transform duration-500"
+                                            className="object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
-                                        <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-white ${projectCategories[project.category].color}`}>
+                                        {/* Hover overlay with gradient */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                                        {/* Enhanced category badge */}
+                                        <div className={`absolute top-4 left-4 px-4 py-2 rounded-full text-xs font-bold text-white backdrop-blur-md shadow-2xl border border-white/20 ${projectCategories[project.category].color}`}>
                                             {projectCategories[project.category].label}
                                         </div>
                                     </div>
